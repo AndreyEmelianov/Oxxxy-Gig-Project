@@ -1,0 +1,30 @@
+.header {
+  z-index: 2;
+}
+
+header {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  @include flex-center;
+  column-gap: 20px;
+
+  &-item {
+    a {
+      color: $white;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      transition: color 0.25s ease;
+
+      &:hover {
+        color: $action;
+      }
+    }
+  }
+}

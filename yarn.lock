@@ -2172,6 +2172,13 @@
   resolved "https://registry.yarnpkg.com/@types/range-parser/-/range-parser-1.2.7.tgz#50ae4353eaaddc04044279812f52c8c65857dbcb"
   integrity sha512-hKormJbkJqzQGhziax5PItDUTMAM9uE2XXQmM37dyd4hVM+5aVl7oVxMVUiVQn2oCQFN/LKCZdvSM0pFRqbSmQ==
 
+"@types/react-animate-on-scroll@^2.1.8":
+  version "2.1.8"
+  resolved "https://registry.yarnpkg.com/@types/react-animate-on-scroll/-/react-animate-on-scroll-2.1.8.tgz#6b0405226513297fad72692c3e242d1a2608a3ca"
+  integrity sha512-Lyd1hb1aY9T0bOUL3VE7bKuOlAv2nBziJg5piDLqW+jxzy5jCa/nIftsOpYxZ0+Sdo0wFXuI6tpLo6B0Q288IQ==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-dom@^18.0.0", "@types/react-dom@^18.2.18":
   version "18.2.18"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-18.2.18.tgz#16946e6cd43971256d874bc3d0a72074bb8571dd"
