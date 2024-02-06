@@ -15,7 +15,7 @@ interface ITourItemProps {
   index: number;
 }
 
-const TourItem: FC<ITourItemProps> = ({
+export const TourItem: FC<ITourItemProps> = ({
   city,
   date,
   ticketLink,
@@ -59,4 +59,3 @@ const TourItem: FC<ITourItemProps> = ({
     </li>
   );
 };
-export default TourItem;

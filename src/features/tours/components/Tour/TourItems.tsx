@@ -7,7 +7,7 @@ import { SectionMotion } from '../../../../components/SectionMotion/SectionMotio
 import { SectionTitle } from '../../../../components/SectionTitle/SectionTitle';
 import { getTour } from '../../selectors';
 import { getToursItems } from '../../toursSlice';
-import TourItem from '../TourItem/TourItem';
+import { TourItem } from '../TourItem/TourItem';
 import { sortTourByDate } from '../../utils';
 
 export const TourItems: FC = () => {

@@ -1,6 +1,16 @@
 .tour {
   padding: 20px 0;
 
+  &-banner {
+    position: relative;
+    padding-top: 32px;
+
+    video {
+      height: auto;
+      width: 100%;
+    }
+  }
+
   &-list {
     margin-top: 20px;
   }
