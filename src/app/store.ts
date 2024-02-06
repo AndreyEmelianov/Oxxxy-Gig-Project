@@ -2,10 +2,12 @@ import { configureStore } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
 
 import tourReducer from '../features/tours/toursSlice';
+import tracksReducer from '../features/tracks/tracksSlice';
 
 export const store = configureStore({
   reducer: {
     tour: tourReducer,
+    tracks: tracksReducer,
   },
   devTools: true,
 });
