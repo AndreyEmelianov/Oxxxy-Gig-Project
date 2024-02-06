@@ -1,7 +1,7 @@
-import { FC, useRef } from 'react';
+import { FC, HTMLAttributes, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
-interface ISectionMotionProps {
+interface ISectionMotionProps extends HTMLAttributes<HTMLElement> {
   children: React.ReactNode;
 }
 

@@ -91,7 +91,18 @@ input[type='number'] {
 
 h2 {
   color: $white;
-  font-size: 24p;
+  font-size: 24px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.button-more {
+  color: $white;
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: underline;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
 }

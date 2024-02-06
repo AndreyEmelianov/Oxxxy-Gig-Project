@@ -30,3 +30,5 @@ export const SOCIALS = [
     link: 'https://open.spotify.com/artist/1gCOYbJNUa1LBVO5rlx0jB',
   },
 ];
+
+export const MAIN_URL = `https://graphql.contentful.com/content/v1/spaces/${process.env.REACT_APP_SPACE_ID}`;
