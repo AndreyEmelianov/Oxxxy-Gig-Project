@@ -11,6 +11,7 @@ import { SectionTitle } from '../../../../components/SectionTitle/SectionTitle';
 import { Icon } from '../../../../components/Icon/Icon';
 import { dateFormatterRuLocale } from '../../../../app/utils';
 import { ITrackItem } from '../../types';
+import { Loader } from '../../../../components/Loader/Loader';
 
 export const Tracks: FC = () => {
   const [audio] = useState(new Audio());
@@ -45,7 +46,7 @@ export const Tracks: FC = () => {
         <SectionTitle text="Треки" />
 
         {isLoading ? (
-          'loading...'
+          <Loader />
         ) : (
           <div className="tracks">
             {items

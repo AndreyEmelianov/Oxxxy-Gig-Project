@@ -12,6 +12,7 @@ import { SectionTitle } from '../../../../components/SectionTitle/SectionTitle';
 import { SectionMotion } from '../../../../components/SectionMotion/SectionMotion';
 import { Icon } from '../../../../components/Icon/Icon';
 import { SliderButtonType } from '../../types';
+import { Loader } from '../../../../components/Loader/Loader';
 
 import 'swiper/css';
 
@@ -38,7 +39,7 @@ export const News: FC = () => {
       <div className="container">
         <SectionTitle text="Новости" />
         {isLoading ? (
-          'loading...'
+          <Loader />
         ) : (
           <Swiper
             ref={sliderRef}

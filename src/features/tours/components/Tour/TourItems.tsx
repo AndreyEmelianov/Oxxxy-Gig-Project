@@ -9,6 +9,7 @@ import { getTour } from '../../selectors';
 import { getToursItems } from '../../toursSlice';
 import { TourItem } from '../TourItem/TourItem';
 import { sortTourByDate } from '../../utils';
+import { Loader } from '../../../../components/Loader/Loader';
 
 export const TourItems: FC = () => {
   const dispatch = useAppDispatch();
@@ -30,7 +31,7 @@ export const TourItems: FC = () => {
       <div className="container">
         <SectionTitle text="Концерты" />
         {isLoading ? (
-          'loading...'
+          <Loader />
         ) : (
           <ul className="tour-list">
             {filteredItems.map((item, index) => (

@@ -113,3 +113,25 @@ h2 {
     color: $action;
   }
 }
+
+.loader {
+  min-height: 20vh;
+  width: 100%;
+  position: relative;
+  @include flex-center;
+
+  img {
+    max-width: 50px;
+    animation: loaderBeat 0.75s linear infinite;
+  }
+}
+
+@keyframes loaderBeat {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.8);
+  }
+}
