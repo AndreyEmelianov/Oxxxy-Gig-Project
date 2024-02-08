@@ -5,6 +5,66 @@
   &-section {
     padding: 50px 0;
   }
+
+  &-list {
+    margin-top: 40px;
+
+    &__item {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: 300px 1fr;
+      grid-template-rows: auto 40px;
+      grid-template-areas:
+        'image info'
+        'image button';
+
+      &-image {
+        grid-area: image;
+        width: 100%;
+        height: 300px;
+
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &-info {
+        grid-area: info;
+      }
+
+      &-date {
+        color: $grey;
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+
+      &-title {
+        margin: 16px 0;
+        color: $white;
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      &-description {
+        color: $white;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 500;
+      }
+
+      &-btn {
+        grid-area: button;
+        @include button;
+        width: 212px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+  }
 }
 
 .track {

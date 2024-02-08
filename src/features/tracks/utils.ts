@@ -3,6 +3,7 @@ export const tracksItemsCollectionQuery = `{
     items {
       date
       title
+      descriptionn
       link {
         url
       }

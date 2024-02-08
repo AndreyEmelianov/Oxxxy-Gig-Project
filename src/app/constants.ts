@@ -1,6 +1,6 @@
 export const MENU = [
   { name: 'Концерты', link: 'tour' },
-  { name: 'Творчество', link: '#track' },
+  { name: 'Творчество', link: 'tracks' },
   { name: 'Новости', link: 'news' },
 ];
 

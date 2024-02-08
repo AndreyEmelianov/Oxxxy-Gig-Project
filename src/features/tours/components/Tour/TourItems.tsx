@@ -2,11 +2,11 @@ import { FC } from 'react';
 import { Link } from 'react-router-dom';
 
 import { SectionMotion } from '../../../../components/SectionMotion/SectionMotion';
-import { SectionTitle } from '../../../../components/Titles/SectionTitle';
 import { Loader } from '../../../../components/Loader/Loader';
 import { TourItem } from '../TourItem/TourItem';
 import { sortTourByDate } from '../../utils';
 import { useTourItems } from '../../hooks/useTourItems';
+import { SectionTitle } from '../../../../components/Titles/SectionTitle';
 
 export const TourItems: FC = () => {
   const { items = [], isLoading = false } = useTourItems();

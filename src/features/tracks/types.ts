@@ -1,6 +1,7 @@
 export interface ITrackItem {
   date: string;
   title: string;
+  descriptionn?: string;
   link: {
     url: string;
   };

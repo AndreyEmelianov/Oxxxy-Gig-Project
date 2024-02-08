@@ -1,30 +1,21 @@
-import { FC, useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { FC, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ScrollAnimation from 'react-animate-on-scroll';
 
-import { useAppDispatch } from '../../../../app/store';
-import { getTracksItems } from '../../tracksSlice';
-import { getTracks } from '../../selectors';
 import { SectionMotion } from '../../../../components/SectionMotion/SectionMotion';
-import { SectionTitle } from '../../../../components/Titles/SectionTitle';
 import { Icon } from '../../../../components/Icon/Icon';
 import { dateFormatterRuLocale } from '../../../../app/utils';
 import { ITrackItem } from '../../types';
 import { Loader } from '../../../../components/Loader/Loader';
+import { SectionTitle } from '../../../../components/Titles/SectionTitle';
+import { useTracksItems } from '../hooks/useTracksItems';
 
 export const Tracks: FC = () => {
   const [audio] = useState(new Audio());
   const [playing, setPlaying] = useState<boolean>(false);
   const [currentTrack, setCurrentTrack] = useState<ITrackItem | null>(null);
 
-  const dispatch = useAppDispatch();
-
-  const { items, isLoading } = useSelector(getTracks);
-
-  useEffect(() => {
-    dispatch(getTracksItems());
-  }, [dispatch]);
+  const { items, isLoading } = useTracksItems();
 
   const handleTrackClick = (track: ITrackItem) => {
     setPlaying((prevState) => {
