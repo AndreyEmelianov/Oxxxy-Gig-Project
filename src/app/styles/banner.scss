@@ -1,0 +1,90 @@
+.shop {
+  &-banner {
+    background: rgb(25, 27, 35);
+    width: 100%;
+    height: 336px;
+    padding-left: 24px;
+    align-items: center;
+    display: flex;
+    position: relative;
+
+    &:hover {
+      &:after {
+        opacity: 1;
+      }
+
+      .shop-logo {
+        transform: rotate(180deg);
+      }
+    }
+
+    &:after,
+    &::before {
+      content: '';
+      display: block;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    &:before {
+      background: url('../../images/effect.webp') no-repeat center/contain;
+      @include centerAbsolute;
+    }
+
+    &:after {
+      background: url('../../images/banner-glow.webp') no-repeat center/cover;
+      opacity: 0.5;
+      transition: opacity 0.25s;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+    }
+
+    &__section {
+      margin-top: 200px;
+    }
+
+    &__wrapper {
+      overflow: hidden;
+      min-height: 504px;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    &__subtitle {
+      color: $grey;
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    &__title {
+      color: $white;
+      font-size: 70px;
+      line-height: 125%;
+      font-weight: 900;
+      margin-top: 32px;
+    }
+
+    &__logo {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      z-index: 1;
+
+      img {
+        transform: rotate(0);
+        transition: transform 1s ease-in-out;
+      }
+    }
+
+    &__image {
+      position: absolute;
+      right: 10%;
+      bottom: -23px;
+      z-index: 2;
+    }
+  }
+}

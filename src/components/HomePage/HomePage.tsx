@@ -4,6 +4,7 @@ import { MainBanner } from '../MainBanner/MainBanner';
 import { TourItems } from '../../features/tours/components/Tour/TourItems';
 import { TourBanner } from '../../features/tours/components/TourBanner/TourBanner';
 import { Tracks } from '../../features/tracks/components/Tracks/Tracks';
+import { ShopBanner } from '../ShopBanner/ShopBanner';
 
 export const HomePage: FC = () => {
   return (
@@ -12,6 +13,7 @@ export const HomePage: FC = () => {
       <TourItems />
       <TourBanner />
       <Tracks />
+      <ShopBanner />
     </main>
   );
 };
