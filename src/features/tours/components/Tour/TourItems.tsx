@@ -1,24 +1,15 @@
-import { FC, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { FC } from 'react';
 import { Link } from 'react-router-dom';
 
-import { useAppDispatch } from '../../../../app/store';
 import { SectionMotion } from '../../../../components/SectionMotion/SectionMotion';
-import { SectionTitle } from '../../../../components/SectionTitle/SectionTitle';
-import { getTour } from '../../selectors';
-import { getToursItems } from '../../toursSlice';
+import { SectionTitle } from '../../../../components/Titles/SectionTitle';
+import { Loader } from '../../../../components/Loader/Loader';
 import { TourItem } from '../TourItem/TourItem';
 import { sortTourByDate } from '../../utils';
-import { Loader } from '../../../../components/Loader/Loader';
+import { useTourItems } from '../../hooks/useTourItems';
 
 export const TourItems: FC = () => {
-  const dispatch = useAppDispatch();
-
-  const { items = [], isLoading = false } = useSelector(getTour);
-
-  useEffect(() => {
-    dispatch(getToursItems());
-  }, [dispatch]);
+  const { items = [], isLoading = false } = useTourItems();
 
   const filteredItems = sortTourByDate(
     items

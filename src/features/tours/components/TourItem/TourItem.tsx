@@ -13,6 +13,7 @@ interface ITourItemProps {
   videoLink: string | null;
   soldOut: boolean;
   index: number;
+  offset?: number;
 }
 
 export const TourItem: FC<ITourItemProps> = ({
@@ -23,6 +24,7 @@ export const TourItem: FC<ITourItemProps> = ({
   soldOut,
   place,
   index,
+  offset = 260,
 }) => {
   return (
     <li>
@@ -31,7 +33,7 @@ export const TourItem: FC<ITourItemProps> = ({
         animateIn="fadeInLeft"
         animateOut="fadeOutRight"
         delay={index * 100}
-        offset={260}>
+        offset={offset}>
         <div className="tour-item__info">
           <div className="tour-item__date">{dateFormatterRuLocale(date)}</div>
           <p className="tour-item__place">{place}</p>

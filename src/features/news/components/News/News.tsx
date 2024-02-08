@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import { getNews } from '../../selectors';
 import { getNewsItems } from '../../newsSlice';
 import { useAppDispatch } from '../../../../app/store';
-import { SectionTitle } from '../../../../components/SectionTitle/SectionTitle';
+import { SectionTitle } from '../../../../components/Titles/SectionTitle';
 import { SectionMotion } from '../../../../components/SectionMotion/SectionMotion';
 import { Icon } from '../../../../components/Icon/Icon';
 import { SliderButtonType } from '../../types';

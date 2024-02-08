@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import ScrollAnimation from 'react-animate-on-scroll';
 
 import { Logo } from '../Logo/Logo';
@@ -20,7 +20,9 @@ export const Header: FC = () => {
                 animateIn="fadeInDown"
                 delay={index * 100}
                 offset={0}>
-                <Link to={`/${link}`}>{name}</Link>
+                <NavLink className={({ isActive }) => (isActive ? 'active' : '')} to={`/${link}`}>
+                  {name}
+                </NavLink>
               </ScrollAnimation>
             ))}
           </nav>

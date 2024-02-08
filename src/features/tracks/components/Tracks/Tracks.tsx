@@ -7,7 +7,7 @@ import { useAppDispatch } from '../../../../app/store';
 import { getTracksItems } from '../../tracksSlice';
 import { getTracks } from '../../selectors';
 import { SectionMotion } from '../../../../components/SectionMotion/SectionMotion';
-import { SectionTitle } from '../../../../components/SectionTitle/SectionTitle';
+import { SectionTitle } from '../../../../components/Titles/SectionTitle';
 import { Icon } from '../../../../components/Icon/Icon';
 import { dateFormatterRuLocale } from '../../../../app/utils';
 import { ITrackItem } from '../../types';

@@ -114,6 +114,18 @@ h2 {
   }
 }
 
+.page {
+  padding: 40px 0;
+
+  &-title {
+    font-size: 60px;
+    line-height: 125%;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: $white;
+  }
+}
+
 .loader {
   min-height: 20vh;
   width: 100%;

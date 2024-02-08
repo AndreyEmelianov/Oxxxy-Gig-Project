@@ -22,7 +22,8 @@ header {
       text-transform: uppercase;
       transition: color 0.25s ease;
 
-      &:hover {
+      &:hover,
+      &.active {
         color: $action;
       }
     }
