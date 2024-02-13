@@ -39,7 +39,18 @@ export const News: FC = () => {
             slidesPerView={4}
             className="news"
             navigation
-            modules={[Navigation]}>
+            modules={[Navigation]}
+            breakpoints={{
+              1366: {
+                slidesPerView: 4,
+              },
+              720: {
+                slidesPerView: 3,
+              },
+              360: {
+                slidesPerView: 2,
+              },
+            }}>
             {items.map((news, index) => (
               <SwiperSlide key={news.sys.id}>
                 <ScrollAnimation

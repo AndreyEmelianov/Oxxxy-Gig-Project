@@ -5,6 +5,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import { Logo } from '../Logo/Logo';
 import { MENU } from '../../app/constants';
 import { Socials } from '../Socials/Socials';
+import { MobileMenu } from './MobileMenu';
 
 export const Header: FC = () => {
   return (
@@ -27,6 +28,7 @@ export const Header: FC = () => {
             ))}
           </nav>
           <Socials />
+          <MobileMenu />
         </header>
       </div>
     </section>

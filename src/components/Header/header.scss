@@ -8,11 +8,90 @@ header {
   grid-template-columns: 1fr max-content 1fr;
   justify-content: space-between;
   align-items: center;
+
+  @media only screen and (max-width: 750px) {
+    padding-top: 10px;
+  }
+
+  .logo {
+    @media only screen and (max-width: 750px) {
+      width: 32px;
+    }
+  }
 }
 
 .menu {
   @include flex-center;
   column-gap: 20px;
+
+  &-mobile {
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+
+    .icon {
+      width: 24px;
+      height: 24px;
+      fill: $white;
+    }
+
+    @media only screen and (max-width: 750px) {
+      display: block;
+    }
+
+    &__list {
+      position: fixed;
+      width: 100%;
+      height: max-content;
+      left: 0;
+      top: 0;
+      background: $primary;
+      height: 100vh;
+      transform: translateX(100vw);
+      transition: transform 0.7s ease-in-out;
+
+      &.opened {
+        transform: translateX(0);
+      }
+
+      .icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+      }
+
+      .logo {
+        width: 48px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        cursor: pointer;
+      }
+    }
+
+    &__items {
+      display: flex;
+      flex-direction: column;
+      padding: 60px 0;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      row-gap: 10px;
+    }
+
+    &__item {
+      color: $white;
+      font-size: 20px;
+      line-height: 125%;
+      font-weight: 700;
+      text-transform: uppercase;
+
+      &.active {
+        color: $action;
+      }
+    }
+  }
 
   &-item {
     a {
@@ -27,5 +106,9 @@ header {
         color: $action;
       }
     }
+  }
+
+  @media only screen and (max-width: 750px) {
+    display: none;
   }
 }

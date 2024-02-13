@@ -6,9 +6,17 @@
   background-size: contain;
   background-position: center;
 
+  @media only screen and (max-width: 1366px) {
+    min-height: 250px;
+  }
+
   &-video {
     position: absolute;
     @include centerAbsolute;
     top: 30%;
+
+    @media only screen and (max-width: 1366px) {
+      width: 500px;
+    }
   }
 }

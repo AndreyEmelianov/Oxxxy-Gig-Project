@@ -79,10 +79,21 @@
       border-bottom: 1px solid rgba(217, 217, 217, 0.5);
     }
 
+    @media only screen and (max-width: 750px) {
+      flex-wrap: wrap;
+      row-gap: 10px;
+      padding: 14px 0;
+      align-items: flex-start;
+    }
+
     &__date {
       color: $white;
       font-size: 20px;
       font-weight: 900;
+
+      @media only screen and (max-width: 1366px) {
+        font-size: 16px;
+      }
     }
 
     &__place {
@@ -90,12 +101,28 @@
       font-size: 16px;
       font-weight: 400;
       margin-top: 3px;
+
+      @media only screen and (max-width: 1366px) {
+        font-size: 12px;
+      }
+
+      @media only screen and (max-width: 750px) {
+        margin-top: 0;
+      }
     }
 
     &__city {
       color: $white;
       font-size: 24px;
       font-weight: 700;
+
+      @media only screen and (max-width: 1366px) {
+        font-size: 18px;
+      }
+
+      @media only screen and (max-width: 750px) {
+        font-size: 16px;
+      }
     }
 
     &__button {
@@ -104,6 +131,10 @@
       &.soldout {
         background: #505050;
         cursor: not-allowed;
+      }
+
+      @media only screen and (max-width: 750px) {
+        width: 100%;
       }
     }
   }

@@ -13,8 +13,8 @@ export const ShopBanner: FC = () => {
         <div className="shop-banner__wrapper">
           <Link className="shop-banner" to="/shop">
             <ScrollAnimation
-              animateIn="fadeInRight"
-              animateOut="fadeOutRight"
+              animateIn="fadeInLeft"
+              animateOut="fadeOutLeft"
               className="shop-banner__text">
               <p className="shop-banner__subtitle">ОБНОВЛЕННЫЙ МЕРЧ ОТ ОКСИМИРОНА</p>
               <p className="shop-banner__title">OXXXYSHOP 2.0</p>
