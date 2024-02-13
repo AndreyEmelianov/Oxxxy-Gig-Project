@@ -1,30 +1,22 @@
-import { FC, useCallback, useEffect, useRef } from 'react';
-import { useSelector } from 'react-redux';
+import { FC, useCallback, useRef } from 'react';
 import { Swiper, SwiperRef, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { Link } from 'react-router-dom';
 
-import { getNews } from '../../selectors';
-import { getNewsItems } from '../../newsSlice';
-import { useAppDispatch } from '../../../../app/store';
 import { SectionMotion } from '../../../../components/SectionMotion/SectionMotion';
 import { Icon } from '../../../../components/Icon/Icon';
 import { SliderButtonType } from '../../types';
 import { SectionTitle } from '../../../../components/Titles/SectionTitle';
 import { Loader } from '../../../../components/Loader/Loader';
+import { useNewsItems } from '../../hooks/useNewsItems';
 
 import 'swiper/css';
 
 export const News: FC = () => {
   const sliderRef = useRef<SwiperRef | null>(null);
 
-  const dispatch = useAppDispatch();
-  const { items, isLoading } = useSelector(getNews);
-
-  useEffect(() => {
-    dispatch(getNewsItems());
-  }, [dispatch]);
+  const { items, isLoading } = useNewsItems();
 
   const handleSliderButtonClick = useCallback((type: SliderButtonType) => {
     if (!sliderRef.current) return;

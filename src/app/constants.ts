@@ -32,3 +32,6 @@ export const SOCIALS = [
 ];
 
 export const MAIN_URL = `https://graphql.contentful.com/content/v1/spaces/${process.env.REACT_APP_SPACE_ID}`;
+
+export const ASSET_URL = (assetId: string) =>
+  `https://cdn.contentful.com/spaces/${process.env.REACT_APP_SPACE_ID}/assets/${assetId}?access_token=${process.env.REACT_APP_ACCESS_TOKEN}`;

@@ -1,7 +1,9 @@
 export interface INewsItem {
   date: string;
   title: string;
-  description?: string;
+  description?: {
+    json: any;
+  };
   cover: {
     url: string;
   };

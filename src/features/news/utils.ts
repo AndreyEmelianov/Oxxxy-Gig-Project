@@ -12,3 +12,19 @@ export const newsItemsCollectionQuery = `{
     }
   }
 }`;
+
+export const newsItemQuery = (id: string) => `{
+    newsItem(id: "${id}") {
+      sys {
+        id
+      }
+      title
+      date
+      cover {
+        url
+      }
+      description {
+        json
+      }
+    }
+}`;
